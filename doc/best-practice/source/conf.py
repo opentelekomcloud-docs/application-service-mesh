@@ -30,9 +30,9 @@ otcdocs_repo_name = 'opentelekomcloud-docs/application-service-mesh'
 
 # Those variables are needed for indexing into OpenSearch
 otcdocs_doc_environment = 'public'
-otcdocs_doc_link = '/application-service-mesh/api-ref/'
-otcdocs_doc_title = 'API Reference'
-otcdocs_doc_type = 'api-ref'
+otcdocs_doc_link = '/application-service-mesh/best-practice/'
+otcdocs_doc_title = 'Best Practice'
+otcdocs_doc_type = 'best-practice'
 otcdocs_service_category = 'container'
 otcdocs_service_title = 'Application Service Mesh'
 otcdocs_service_type = 'asm'
@@ -92,7 +92,7 @@ html_theme_options = {
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 
-html_title = "Application Service Mesh - API Reference"
+html_title = "Application Service Mesh - Best Practice"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -106,7 +106,7 @@ html_copy_source = False
 # -- Options for PDF output --------------------------------------------------
 latex_documents = [
     ('index',
-     'asm-api-ref.tex',
-     u'Application Service Mesh - API Reference',
+     'asm-best-practice.tex',
+     u'Application Service Mesh - Best Practice',
      u'OpenTelekomCloud', 'manual'),
 ]
