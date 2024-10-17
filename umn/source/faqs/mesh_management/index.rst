@@ -5,7 +5,7 @@
 Mesh Management
 ===============
 
--  :ref:`Why Cannot I Create a Mesh for My Cluster? <asm_faq_0020>`
+-  :ref:`Why Cannot I Create a Service Mesh for My Cluster? <asm_faq_0020>`
 -  :ref:`Why Are Exclusive Nodes Still Exist After Istio Is Uninstalled? <asm_faq_0022>`
 -  :ref:`How Do I Enable Namespace Injection for a Cluster? <asm_faq_0036>`
 -  :ref:`How Do I Disable Sidecar Injection for Workloads? <asm_faq_0037>`
@@ -16,7 +16,7 @@ Mesh Management
    :maxdepth: 1
    :hidden: 
 
-   why_cannot_i_create_a_mesh_for_my_cluster
+   why_cannot_i_create_a_service_mesh_for_my_cluster
    why_are_exclusive_nodes_still_exist_after_istio_is_uninstalled
    how_do_i_enable_namespace_injection_for_a_cluster
    how_do_i_disable_sidecar_injection_for_workloads

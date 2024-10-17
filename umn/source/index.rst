@@ -10,3 +10,4 @@ Application Service Mesh - User Guide
    user_guide/index
    best_practices/index
    faqs/index
+   change_history

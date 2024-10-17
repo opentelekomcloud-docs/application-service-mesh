@@ -1,0 +1,24 @@
+:original_name: asm_his_0001.html
+
+.. _asm_his_0001:
+
+Change History
+==============
+
+.. table:: **Table 1** Change history
+
+   +-----------------------------------+--------------------------------------------------------------+
+   | Released On                       | Description                                                  |
+   +===================================+==============================================================+
+   | 2024-10-12                        | -  The following are modifications based on review comments: |
+   |                                   |                                                              |
+   |                                   |    - Added the "Upgrades" chapter.                           |
+   |                                   |                                                              |
+   |                                   |    - Updated the infographic of ASM.                         |
+   |                                   |                                                              |
+   |                                   |    - Optimized other problems.                               |
+   |                                   |                                                              |
+   |                                   |    - Added the change history.                               |
+   +-----------------------------------+--------------------------------------------------------------+
+   | 2024-04-25                        | -  First release.                                            |
+   +-----------------------------------+--------------------------------------------------------------+

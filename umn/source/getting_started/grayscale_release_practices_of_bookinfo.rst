@@ -5,7 +5,7 @@
 Grayscale Release Practices of Bookinfo
 =======================================
 
-Application Service Mesh (ASM) is a service mesh platform developed based on Istio and seamlessly interconnects with Cloud Container Engine (CCE). With better usability, reliability, and visualization, ASM provides you with out-of-the-box features and enhanced user experience.
+Application Service Mesh (ASM) is a service mesh platform developed based on Istio and seamlessly interconnects with Cloud Container Engine (CCE). With better usability, reliability, and visualization, ASM provides you with out-of-the-box features and enhanced experience.
 
 Introduction
 ------------
@@ -34,13 +34,13 @@ Bookinfo consists of four independent services developed in different languages.
 
 The reviews service has three versions:
 
--  The v1 (1.5.0) version does not call the ratings service.
--  The v2 (1.5.1) version calls the ratings service and uses one to five black stars to show ratings.
--  The v3 (1.5.2) version calls the ratings service and uses one to five red stars to show ratings.
+-  v1 (1.17.0) does not call the ratings service.
+-  v2 (1.17.1) calls the ratings service and uses one to five black stars to show ratings.
+-  v3 (1.17.2) calls the ratings service and uses one to five red stars to show ratings.
 
 .. note::
 
-   To demonstrate traffic switching between versions, this section takes 1.5.1 (rating with black stars) and 1.5.2 (rating with red stars) of the reviews service as examples.
+   To demonstrate traffic switching between versions, this section takes 1.17.1 (rating with black stars) and 1.17.2 (rating with red stars) of the reviews service as examples.
 
 
 .. figure:: /_static/images/en-us_image_0000001440024745.png
@@ -140,15 +140,15 @@ Perform the following operations:
 
    .. table:: **Table 1** Image list
 
-      =========== ================================ ==========
+      =========== ================================ ============
       Service     Image Name                       Image Tag
-      =========== ================================ ==========
-      productpage examples-bookinfo-productpage-v1 1.5.0
-      details     examples-bookinfo-details-v1     1.5.01.5.0
-      ratings     examples-bookinfo-ratings-v1     1.5.01.5.0
-      reviews     examples-bookinfo-reviews-v1     1.5.1
-      \           examples-bookinfo-reviews-v1     1.5.2
-      =========== ================================ ==========
+      =========== ================================ ============
+      productpage examples-bookinfo-productpage-v1 1.17.0
+      details     examples-bookinfo-details-v1     1.17.01.17.0
+      ratings     examples-bookinfo-ratings-v1     1.17.01.17.0
+      reviews     examples-bookinfo-reviews-v1     1.17.1
+      \           examples-bookinfo-reviews-v1     1.17.2
+      =========== ================================ ============
 
    The following uses Bookinfo images as an example:
 
@@ -158,48 +158,48 @@ Perform the following operations:
 
       Run the following commands in sequence to download the images required by Bookinfo:
 
-      **docker pull docker.io/istio/examples-bookinfo-productpage-v1:1.5.0**
+      **docker pull docker.io/istio/examples-bookinfo-productpage-v1:1.17.0**
 
-      **docker pull docker.io/istio/examples-bookinfo-details-v1:1.5.0**
+      **docker pull docker.io/istio/examples-bookinfo-details-v1:1.17.0**
 
-      **docker pull docker.io/istio/examples-bookinfo-ratings-v1:1.5.0**
+      **docker pull docker.io/istio/examples-bookinfo-ratings-v1:1.17.0**
 
-      **docker pull docker.io/istio/examples-bookinfo-reviews-v2:1.5.0**
+      **docker pull docker.io/istio/examples-bookinfo-reviews-v2:1.17.0**
 
-      **docker pull docker.io/istio/examples-bookinfo-reviews-v3:1.5.0**
+      **docker pull docker.io/istio/examples-bookinfo-reviews-v3:1.17.0**
 
    c. Connect to SWR.
 
    d. Label the images pulled in :ref:`5.b <asm_qs_0001_0__li15857121914118>`. Ensure that the image names and tags are the same as those in :ref:`Table 1 <asm_qs_0001_0__table428162913363>`.
 
-      **docker tag docker.io/istio/examples-bookinfo-productpage-v1:1.5.0** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-productpage-v1:1.5.0**
+      **docker tag docker.io/istio/examples-bookinfo-productpage-v1:1.17.0** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-productpage-v1:1.17.0**
 
-      **docker tag docker.io/istio/examples-bookinfo-details-v1:1.5.0** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-details-v1:1.5.0**
+      **docker tag docker.io/istio/examples-bookinfo-details-v1:1.17.0** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-details-v1:1.17.0**
 
-      **docker tag docker.io/istio/examples-bookinfo-ratings-v1:1.5.0** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-ratings-v1:1.5.0**
+      **docker tag docker.io/istio/examples-bookinfo-ratings-v1:1.17.0** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-ratings-v1:1.17.0**
 
-      **docker tag docker.io/istio/examples-bookinfo-reviews-v2:1.5.0** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-reviews-v1:1.5.1**
+      **docker tag docker.io/istio/examples-bookinfo-reviews-v2:1.17.0** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-reviews-v1:1.17.1**
 
-      **docker tag docker.io/istio/examples-bookinfo-reviews-v3:1.5.0** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-reviews-v1:1.5.2**
+      **docker tag docker.io/istio/examples-bookinfo-reviews-v3:1.17.0** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-reviews-v1:1.17.2**
 
       *swr.xxxxxxxxx.* indicates the image repository address, and *group* indicates the organization name. Replace them with the actual values.
 
    e. Push the images to the SWR.
 
-      **docker push** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-productpage-v1:1.5.0**
+      **docker push** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-productpage-v1:1.17.0**
 
-      **docker push** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-details-v1:1.5.0**
+      **docker push** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-details-v1:1.17.0**
 
-      **docker push** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-ratings-v1:1.5.0**
+      **docker push** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-ratings-v1:1.17.0**
 
-      **docker push** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-reviews-v1:1.5.1**
+      **docker push** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-reviews-v1:1.17.1**
 
-      **docker push** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-reviews-v1:1..5.2**
+      **docker push** *swr.xxxxxxxxx.*\ **/**\ *group*\ **/examples-bookinfo-reviews-v1:1.17.2**
 
    f. Change the image type to **Public**.
 
-Creating a Mesh
----------------
+Creating a Service Mesh
+-----------------------
 
 #. Log in to the ASM console.
 
@@ -213,11 +213,11 @@ Creating a Mesh
 
    -  **Mesh Name**
 
-      Enter the mesh name.
+      Enter the service mesh name.
 
    -  **Istio Version**
 
-      Select the Istio version supported by the mesh.
+      Select the Istio version supported by the service mesh.
 
    -  **Cluster**
 

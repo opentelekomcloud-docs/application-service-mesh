@@ -5,8 +5,8 @@
 Adding a Route
 ==============
 
-Scenario
---------
+Scenarios
+---------
 
 You can add multiple routes and configure multiple forwarding policies for a created gateway.
 

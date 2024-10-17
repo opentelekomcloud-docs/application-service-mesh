@@ -5,8 +5,8 @@
 Changing a Traffic Policy
 =========================
 
-Scenario
---------
+Scenarios
+---------
 
 You can change the settings of a configured traffic policy. For example, you can change the load balancing algorithm from **Round robin** to **Random**.
 

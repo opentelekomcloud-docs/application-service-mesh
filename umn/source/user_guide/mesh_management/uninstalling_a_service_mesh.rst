@@ -2,18 +2,18 @@
 
 .. _asm_01_0086:
 
-Uninstalling a Mesh
-===================
+Uninstalling a Service Mesh
+===========================
 
-Scenario
---------
+Scenarios
+---------
 
-When a mesh is no longer needed, you can uninstall it.
+If you no longer need a service mesh, you can uninstall it.
 
 Constraints
 -----------
 
--  To uninstall a mesh in which a grayscale release task is running, you need to complete the grayscale release first.
+-  To uninstall a service mesh in which a grayscale release task is running, you need to complete the grayscale release first.
 -  You need to ensure available nodes exist in the clusters for running the cleanup task to avoid uninstallation failure.
 
 Procedure
@@ -21,7 +21,7 @@ Procedure
 
 #. Log in to the ASM console.
 
-#. Click |image1| in the target mesh.
+#. Click |image1| in the service mesh.
 
 #. On the dialogue box displayed, select whether to restart existing services and read the precautions.
 
@@ -31,13 +31,13 @@ Procedure
 
       You are advised to restart existing services to avoid the following exceptions: If the cluster enables the current mesh again after it is uninstalled, gateway access failed.
 
-   -  Uninstalling a mesh will uninstall its control plane components and data plane sidecars.
+   -  Uninstalling a service mesh will uninstall its control plane components and data plane sidecars.
 
    -  After the uninstallation, service gateways of applications cannot be used. Configure Services for external access to applications.
 
       To update the external access mode, log in to the CCE console and click the cluster name to go to the cluster console. Then, choose **Services & Ingresses** > **Services**.
 
-   -  Uninstalling a mesh will delete the labels of the mesh exclusive nodes, but the Istio-master node will not be automatically deleted. You can delete it on the CCE console.
+   -  Uninstalling a service mesh will delete the labels of the Istio exclusive nodes, but the Istio-master node will not be automatically deleted. You can delete it on the CCE console.
 
       To view node information, log in to the CCE console and click the cluster name to go to the cluster console. In the navigation pane on the left, choose **Nodes** > **Nodes**.
 

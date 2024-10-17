@@ -10,7 +10,7 @@ This section describes how to authenticate JWT requests on the ingress gateway u
 Preparations
 ------------
 
-#. A mesh of version 1.15 or 1.18 has been created.
+#. A service mesh of version 1.15 or 1.18 has been created.
 #. The **httpbin** service that passes the diagnosis exists in the mesh. The image is **httpbin**, the port protocol is **HTTP**, and the port number is **80**.
 #. An accessible gateway has been created for the **httpbin** service in the mesh.
 
@@ -143,4 +143,4 @@ Checking Whether JWT Authentication Takes Effect
          server: istio-envoy
          x-envoy-upstream-service-time: 6
 
-   According to the preceding outputs, the request with the correct JWT token can access the service, and the request with an incorrect JWT token or without a JWT token cannot access the service, which indicate that the request identity authentication takes effect.
+   According to the preceding outputs, the request with the correct JWT token can access the service, and the request with an incorrect JWT token or without a JWT token cannot access the service. This means the request identity authentication takes effect.
