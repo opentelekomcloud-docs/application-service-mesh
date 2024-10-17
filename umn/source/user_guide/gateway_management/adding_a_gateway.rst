@@ -33,9 +33,9 @@ Procedure
 
    -  **Load Balancer**
 
-      -  Gateways use shared load balancers of ELB for the access over both public and private IPv4 networks.
+      -  Gateways use shared and dedicated load balancers of ELB for the access over both public and private IPv4 networks.
 
-   -  **Listener**
+   -  **Access Entry**
 
       Gateways configure a listener for the load balancer, which listens to requests from the load balancer and distributes traffic.
 

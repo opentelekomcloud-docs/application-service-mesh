@@ -9,6 +9,7 @@ FAQs
 -  :ref:`Mesh Management <asm_faq_0019>`
 -  :ref:`Adding a Service <asm_faq_0001>`
 -  :ref:`Performing Grayscale Release <asm_faq_0006>`
+-  :ref:`Monitoring Traffic <asm_faq_0014>`
 
 .. toctree::
    :maxdepth: 1
@@ -18,3 +19,4 @@ FAQs
    mesh_management/index
    adding_a_service/index
    performing_grayscale_release/index
+   monitoring_traffic/index

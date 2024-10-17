@@ -5,12 +5,12 @@
 Mesh Management
 ===============
 
--  :ref:`Mesh Events <asm_01_0133>`
--  :ref:`Uninstalling a Mesh <asm_01_0086>`
+-  :ref:`Service Mesh Events <asm_01_0133>`
+-  :ref:`Uninstalling a Service Mesh <asm_01_0086>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
-   mesh_events
-   uninstalling_a_mesh
+   service_mesh_events
+   uninstalling_a_service_mesh

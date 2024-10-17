@@ -9,7 +9,7 @@ There are many reasons for a canary upgrade failure. In case of a canary upgrade
 
 #. Failed to check custom resource definitions (CRDs) before the upgrade.
 
-   **Solution**: New Istio version does not support some CRDs, including clusterrbacconfigs, serviceroles, servicerolebindings, and policies. If there are resources to be discarded in the current version, delete them before the upgrade.
+   **Solution**: New Istio version does not support some CRDs, including ClusterRbacConfigs, ServiceRoles, ServiceRoleBindings, and Policies. If there are resources to be discarded in the current version, delete them before the upgrade.
 
 #. Failed to check Istio gateway labels before the upgrade.
 
@@ -31,11 +31,11 @@ There are many reasons for a canary upgrade failure. In case of a canary upgrade
 
    **Solution**: Use the cluster version listed in the following table.
 
-   ============ =========================
-   Mesh Version Supported Cluster Version
-   1.15         1.21,1.23,1.25,1.27
-   1.18         1.25,1.27,1.28,1.29
-   ============ =========================
+   ==================== ==========================
+   Service Mesh Version Supported Cluster Version
+   1.15                 1.21, 1.23, 1.25, and 1.27
+   1.18                 1.25,1.27, and 1.28
+   ==================== ==========================
 
 #. Failed to check the component affinity before the upgrade.
 
@@ -64,4 +64,4 @@ There are many reasons for a canary upgrade failure. In case of a canary upgrade
 
 #. Failed to check the automatic namespace injection before the upgrade.
 
-   **Solution:** If there are pods in the namespace when you migrate mesh data from the Dedicated edition to the Basic edition, enable automatic injection for the namespace.
+   **Solution:** If there are pods in the namespace when you migrate service mesh data from the Dedicated edition to the Basic edition, enable automatic injection for the namespace.

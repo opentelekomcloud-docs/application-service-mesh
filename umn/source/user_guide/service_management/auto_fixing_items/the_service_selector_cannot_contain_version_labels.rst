@@ -13,9 +13,9 @@ The **spec.selector** of a Service cannot be labeled with **version**. Otherwise
 Rectification Guide
 -------------------
 
-#. Log in to the CCE console.
+#. Log in to the CCE console and click the cluster name to go to the cluster console.
 
-#. Click the cluster name to go to the cluster console. In the navigation pane on the left, choose **Services & Ingresses**. On the **Services** tab, search for the Service by cluster name and namespace and click **Edit YAML**. Then, view the selector (specified by **spec.selector**) of the Service and delete the **version** label.
+#. In the navigation pane, choose **Services & Ingresses**. Click the **Service** tab, search for the Service by cluster name and namespace, click **Edit YAML**. Then, view **spec.selector** and delete the **version** label.
 
    |image1|
 

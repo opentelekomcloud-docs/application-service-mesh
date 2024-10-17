@@ -2,8 +2,8 @@
 
 .. _asm_bestpractice_1009:
 
-Creating a Service Mesh with IPv4/IPv6 Dual Stack Enabled
-=========================================================
+How Do I Create a Service Mesh with IPv4/IPv6 Dual Stack Enabled
+================================================================
 
 You can create a CCE cluster with IPv4/IPv6 dual stack enabled and enable IPv4/IPv6 dual stack for the service mesh that the cluster is added to. IPv4/IPv6 dual stack allows services in the service mesh to use both IPv4 and IPv6 addresses for service-to-service interactions. After an IPv4/IPv6 dual-stack gateway is added for the service mesh, you can provide services for users using an IPv6 client. This section describes how you can create a service mesh with IPv4/IPv6 dual stack, so that services in the service mesh can communicate with each other using IPv6 addresses.
 
@@ -16,7 +16,7 @@ Application Scenarios
 Constraints
 -----------
 
--  Constraints on enabling IPv4/IPv6 dual stack for a service mesh
+-  Conditions for enabling IPv4/IPv6 dual stack for a service mesh
 
 +----------------------+---------------+--------------------+--------------------------+--------------------------------------------+
 | Service Mesh Edition | Istio Version | Cluster Type       | Cluster Network Type     | Remarks                                    |
@@ -24,7 +24,7 @@ Constraints
 | Basic                | 1.18 or later | CCE Turbo clusters | Cloud native network 2.0 | IPv6 needs to be enabled for the clusters. |
 +----------------------+---------------+--------------------+--------------------------+--------------------------------------------+
 
--  Constraints on creating an IPv4/IPv6 dual-stack gateway
+-  Conditions for creating an IPv4/IPv6 dual-stack gateway
 
 +----------------------+---------------+--------------------+----------------------------------+----------------------------------------+
 | Service Mesh Edition | Istio Version | Load Balancer Type | Load Balancer Specification      | Remarks                                |
@@ -32,8 +32,10 @@ Constraints
 | Basic                | 1.18 or later | Dedicated          | Network load balancing (Layer 4) | The load balancer has an IPv6 address. |
 +----------------------+---------------+--------------------+----------------------------------+----------------------------------------+
 
+-  **Enable IPv6** is only available in Basic service meshes based on Istio 1.18 or later.
+
 -  IPv4/IPv6 dual stack cannot be disabled once it is enabled for a service mesh. IPv4/IPv6 dual stack cannot be enabled for an existing service mesh.
--  IPv4/IPv6 dual stack is only available for service meshes of v1.18 or later, but it cannot be enabled for a service mesh that is upgraded to v1.18 or later.
+-  IPv4/IPv6 dual stack cannot be enabled for a service mesh whose Istio version is upgraded to 1.18 or later.
 
 Creating a Service Mesh with IPv6 Addresses
 -------------------------------------------

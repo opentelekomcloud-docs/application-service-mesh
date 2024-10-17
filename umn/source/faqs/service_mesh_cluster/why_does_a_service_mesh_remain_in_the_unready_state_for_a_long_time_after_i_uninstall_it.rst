@@ -2,18 +2,18 @@
 
 .. _asm_faq_0031:
 
-Why Does a Service Mesh Remain in the Unready Status for a Long Time After I Uninstall It?
-==========================================================================================
+Why Does a Service Mesh Remain in the Unready State for a Long Time After I Uninstall It?
+=========================================================================================
 
 Symptom
 -------
 
-On the ASM console, after I uninstall a service mesh, the mesh remains in the unready status for a long time.
+On the ASM console, after I uninstall a service mesh, it remains in the unready state for a long time.
 
 Fault Diagnosis
 ---------------
 
-#. Log in to the CCE console. Click the cluster name to go to the cluster console. In the navigation pane on the left, choose **App Templates**.
+#. Log in to the CCE console. Click the cluster name to go to the cluster console. In the navigation pane, choose **App Templates**.
 
 #. Click **Releases** and select the target cluster from the drop-down list. Check the releases and the latest events about uninstallation failure.
 
@@ -44,4 +44,4 @@ Solution
       kubectl delete crd -n istio-system `kubectl get crd -n istio-system | grep istio | awk '{print $1}'`
       kubectl delete mutatingwebhookconfigurations -n istio-system `kubectl get mutatingwebhookconfigurations -n istio-system | grep istio | awk '{print $1}'`
 
-#. Log in to the ASM console and uninstall the mesh again.
+#. Log in to the ASM console and uninstall the service mesh again.

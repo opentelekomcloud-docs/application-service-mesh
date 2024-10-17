@@ -5,7 +5,7 @@
 Creating a Service Mesh
 =======================
 
--  :ref:`Creating a Service Mesh <asm_01_0020>`
+-  :ref:`Creating a Service Mesh <asm_01_0084>`
 
 .. toctree::
    :maxdepth: 1

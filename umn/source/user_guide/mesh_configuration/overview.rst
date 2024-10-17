@@ -15,4 +15,4 @@ The functions of each tab page in **Mesh Configuration** are as follows:
 -  **Sidecar Management**: You can view information about all workloads injected with sidecars, perform sidecar injection, and configure sidecar resource limits. For details, see :ref:`Sidecar Management <asm_01_0041>`.
 -  **Istio Resource Management**: You can view all Istio resources (such as VirtualService and DestinationRule), create Istio resources in YAML or JSON format, and modify existing Istio resources. For details, see :ref:`Istio Resource Management <asm_01_0091>`.
 -  **Upgrade**: You can upgrade the version of a service mesh.
--  Mesh extension: provides the observability configuration. For details, see :ref:`Service Mesh Extension <asm_01_0123>`.
+-  **Extensions**: provides the observability configuration.

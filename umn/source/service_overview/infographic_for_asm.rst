@@ -7,4 +7,4 @@ Infographic for ASM
 
 |image1|
 
-.. |image1| image:: /_static/images/en-us_image_0000001918938240.png
+.. |image1| image:: /_static/images/en-us_image_0000002043652974.png

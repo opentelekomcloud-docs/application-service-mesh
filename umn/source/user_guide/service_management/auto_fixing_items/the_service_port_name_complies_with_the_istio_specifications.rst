@@ -21,9 +21,9 @@ If the Service port name is invalid, this item is abnormal.
 Rectification Guide
 -------------------
 
-#. Log in to the CCE console.
+#. Log in to the CCE console and click the cluster name to go to the cluster console.
 
-#. Click the cluster name to go to the cluster console. In the navigation pane on the left, choose **Services & Ingresses**. On the **Services** tab, search for the Service by cluster name and namespace and click **Edit YAML**. Then, view the Service protocol and add a protocol type before the service name.
+#. In the navigation pane, choose **Services & Ingresses**. Click the **Service** tab, search for the Service by cluster name and namespace, and click **Edit YAML**. Then, view the Service protocol and add a protocol type before the Service name.
 
    |image1|
 
