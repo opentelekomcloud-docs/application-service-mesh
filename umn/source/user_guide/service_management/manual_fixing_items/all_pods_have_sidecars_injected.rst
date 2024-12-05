@@ -15,27 +15,58 @@ Rectification Guide
 
 #. Log in to the ASM console and click the name of the service mesh that the Service is added to. Choose **Mesh Configuration** in the navigation pane, click the **Sidecar Management** tab, and check whether a sidecar is injected into the namespace that the Service belongs to.
 
-   -  If no, go to :ref:`2 <asm_01_0063__li1665121115612>`.
-   -  If yes, go to :ref:`3 <asm_01_0063__li127525055610>`.
+   -  If the sidecar is not injected into the namespace, go to :ref:`2 <asm_01_0063__li1665121115612>`.
+
+   -  If the sidecar has been injected into the namespace, go to :ref:`3 <asm_01_0063__li127525055610>`.
+
+      Check method:
+
+      On the CCE console, click the cluster name to access the cluster console. In the navigation pane, choose **Namespaces**. On the displayed page, locate your namespace and click **Edit YAML** in the **Operation** column. If there is the **istio.io/rev=<revision>** or **istio-injection=enabled** label, the sidecar has been injected.
+
+      .. note::
+
+         -  There must the **istio-injection=enabled** label for Istio 1.13.9-r3 and earlier versions, as well as Istio 1.15.5-r2 and earlier versions. Note that the version numbers are combined by hyphens (-).
+
+         -  There must be the **istio.io/rev=<revision>** label for Istio later than 1.13.9-r3, Istio later than 1.15.5-r2, and all Istio 1.18 versions. Note that the version numbers are combined by hyphens (-).
+
+            |image1|
 
 #. .. _asm_01_0063__li1665121115612:
 
-   Inject a sidecar.
+   Inject a sidecar into a workload or inject sidecars into the pods of all workloads in the namespace. For details, see :ref:`Injecting a Sidecar <asm_01_0041__section65931513505>`.
 
-   You can inject sidecars for pods of all workloads in the namespace. For details, see :ref:`Injecting a Sidecar <asm_01_0041__section65931513505>`. You can also inject sidecars for a workload as follows:
+   Injection methods:
 
-   a. Label the namespace where the workload is located with **istio-injection=enabled**.
+   -  To inject sidecars into the pods of all workloads in the namespace, run the following command to add a label to the namespace (the label varies depending on the Istio version):
 
-      **kubectl label ns** <namespace> **istio-injection=enabled**
+      .. code-block::
 
-   b. Add the **annotations** field for the workload on the CCE console.
+         kubectl label ns <namespace> istio-injection=enabled
+
+      Or
+
+      .. code-block::
+
+         kubectl label ns <namespace> istio.io/rev=<revision>
+
+      .. note::
+
+         The system adds labels for namespaces based on Istio versions.
+
+         -  **istio-injection=enabled** can be used in Istio 1.13.9-r3 and earlier versions, as well as Istio 1.15.5-r2 and earlier versions.
+
+         -  **istio.io/rev=<revision>** can be used in Istio later than 1.13.9-r3, Istio later than 1.15.5-r2, and all Istio 1.18 versions.
+
+   -  Injecting a sidecar into a workload
+
+      On the CCE console, locate the target workload, choose **More** > **Edit YAML** in the **Operation** column, and manually add the **annotations** field.
 
       .. code-block::
 
                annotations:
                  sidecar.istio.io/inject: 'true'
 
-      |image1|
+      |image2|
 
    For more details about sidecar injection, see `Installing the Sidecar <https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/>`__.
 
@@ -49,11 +80,12 @@ Rectification Guide
 
    On the CCE console, choose **More** > **Edit YAML** in the **Operation** column of the target workload, and check whether **spec.template.spec.hostNetwork: true** is configured. If yes, check whether this field can be deleted or set to **false**. Otherwise, sidecars cannot be injected.
 
-   |image2|
+   |image3|
 
 #. Check whether the number of pods exceeds the service mesh scale.
 
    If the number exceeds , the excess pods cannot be injected with sidecars.
 
-.. |image1| image:: /_static/images/en-us_image_0000001394586873.png
-.. |image2| image:: /_static/images/en-us_image_0000001344069664.png
+.. |image1| image:: /_static/images/en-us_image_0000002086005592.png
+.. |image2| image:: /_static/images/en-us_image_0000001394586873.png
+.. |image3| image:: /_static/images/en-us_image_0000001344069664.png
