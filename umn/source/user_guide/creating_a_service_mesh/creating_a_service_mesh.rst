@@ -1,6 +1,6 @@
-:original_name: asm_01_0084.html
+:original_name: asm_01_0020.html
 
-.. _asm_01_0084:
+.. _asm_01_0020:
 
 Creating a Service Mesh
 =======================
@@ -94,7 +94,7 @@ Procedure
 
       Select a namespace and label it with **istio-injection=enabled**. After being restarted, all pods in the namespace will be automatically injected with an istio-proxy sidecar.
 
-      You can inject a sidecar in **Mesh Configuration** > **Sidecar Management** after the mesh is created. For details, see :ref:`Injecting a Sidecar <asm_01_0041__section65931513505>`.
+      If you do not configure namespace injection, you can inject a sidecar on the **Sidecar Management** tab (**Mesh Configuration** > **Sidecar Management**) after the service mesh is created. For details, see :ref:`Injecting a Sidecar <asm_01_0041__section65931513505>`.
 
    -  **Restart Existing Services**
 

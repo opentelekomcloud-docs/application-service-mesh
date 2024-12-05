@@ -5,26 +5,40 @@
 Sidecar Management
 ==================
 
-On the **Sidecar Management** page, you can view information about all workloads injected with sidecars, perform sidecar injection, and configure sidecar resource limits.
+On the **Sidecar Management** tab, you can view information about all workloads injected with sidecars, inject sidecars, and configure sidecar resource limits.
 
 .. _asm_01_0041__section65931513505:
 
 Injecting a Sidecar
 -------------------
 
-You can view the namespace and cluster to which the injected sidecar belongs. If no sidecar has been injected or you need to inject sidecar for more namespaces, perform the following operations:
+You can view the namespace and cluster that the injected sidecar belongs to. If no sidecar has been injected or you need to inject sidecars for more namespaces, perform the following operations:
 
 #. Log in to the ASM console and click the name of the target service mesh to go to its details page.
-#. In the navigation pane, choose **Mesh Configuration**. Then click the **Sidecar Management** tab.
-#. Click **Sidecar Management**, select a namespace, determine whether to restart the existing services, and click **OK**.
 
-   -  **Namespace**: Select one or more namespaces. The system labels the namespaces with **istio-injection=enabled**.
+#. In the navigation pane, choose **Mesh Configuration**. Then, click the **Sidecar Management** tab.
+
+#. Click **Sidecar Management**, select a namespace, determine whether enable **Restart Existing Services**, and click **OK**.
+
+   Parameter description:
+
+   -  **Namespace**: Select one or more namespaces. The system adds labels for namespaces based on Istio versions.
+
+      -  **istio-injection=enabled** can be used in Istio 1.13.9-r3 and earlier versions, as well as Istio 1.15.5-r2 and earlier versions.
+
+      -  **istio.io/rev=<revision>** can be used in Istio later than 1.13.9-r3, Istio later than 1.15.5-r2, and all Istio 1.18 versions.
 
    -  **Restart Existing Services**
 
-      |image1|: Pods of the existing services in the namespace will be restarted, which will temporarily interrupt your services. The **istio-proxy** sidecar is automatically injected into the pods of the existing services.
+      |image1|: Enabling **Restart Existing Services** will restart the associated pods and temporarily interrupt your services. New pods will have istio-proxy sidecars automatically injected.
 
-      |image2|: The **istio-proxy** sidecar cannot be automatically injected into the pods of the existing services. You need to manually restart the workloads on the CCE console to inject the sidecar. Whether to restart existing services affects only existing services. If the namespaces are labeled with **istio-injection=enabled**, sidecars will be automatically injected into new pods.
+      -  If you select a new namespace, an automatic injection label is added. After all pods running the Deployment in that namespace are restarted, the istio-proxy sidecars will be automatically injected into new pods.
+
+      -  If you deselect a namespace, the automatic injection label is deleted. After all pods running the Deployment in that namespace are restarted, new pods do not have istio-proxy sidecars.
+
+      -  If there are pods that are not injected with sidecars in selected namespaces, all pods running the Deployment will be restarted to inject sidecars. If all pods have sidecars injected, the pods will not be restarted.
+
+      |image2|: When you do not enable **Restart Existing Services**, the istio-proxy sidecars cannot be automatically injected into the associated pods. You need to manually restart the workload on the CCE console to inject sidecars. This parameter affects only existing services. If the namespaces are labeled with **istio-injection=enabled**, sidecars will be automatically injected into new pods.
 
    -  **Traffic Interception Settings**
 
