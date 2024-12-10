@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'asm-api-ref.tex',
-     u'Application Service Mesh - API Reference',
+    u'Application Service Mesh - API Reference',
      u'OpenTelekomCloud', 'manual'),
 ]
 

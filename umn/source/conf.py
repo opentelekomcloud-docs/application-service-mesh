@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'asm-umn.tex',
-     u'Application Service Mesh - User Guide',
+    u'Application Service Mesh - User Guide',
      u'OpenTelekomCloud', 'manual'),
 ]
 

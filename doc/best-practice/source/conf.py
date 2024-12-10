@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'asm-best-practice.tex',
-     u'Application Service Mesh - Best Practice',
+    u'Application Service Mesh - Best Practice',
      u'OpenTelekomCloud', 'manual'),
 ]
 
