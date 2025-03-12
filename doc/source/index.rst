@@ -9,3 +9,4 @@ Application Service Mesh (ASM) is a service mesh platform based on Istio. It sea
    .. service_card::
       :service_type: asm
       :umn: This document describes basic concepts, functions, key terms, best practices and FAQs of the Application Service Mesh (ASM) service and provides instructions for Grayscale Release of Application Service Mesh service.
+      :api-ref: This document describes application programming interfaces (APIs) of Application Service Mesh (ASM) and provides API parameter description and example values.
