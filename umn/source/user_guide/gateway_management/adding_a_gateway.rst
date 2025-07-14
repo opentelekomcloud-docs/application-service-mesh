@@ -29,7 +29,7 @@ Procedure
 
    -  **Cluster**
 
-      Select the cluster to which the gateway belongs.
+      Select the cluster that the gateway belongs to.
 
    -  **Load Balancer**
 
@@ -62,9 +62,9 @@ Procedure
 
          When configuring a TLS protocol with TLS termination enabled or an HTTPS protocol, you can select the earliest and latest TLS versions.
 
-#. (Optional) Configure routing parameters.
+#. (Optional) Configure the route parameters.
 
-   When the access address of a request matches the forwarding policy (which consists of a domain name and URL. If the domain name is left empty, the ELB IP address is used by default), the request is forwarded to the corresponding target Service for processing. Click |image1|. The **Add Route** dialog box is displayed.
+   When the access address of a request matches the forwarding rule (which consists of a domain name and URL. If the domain name is left empty, the IP address of the load balancer is used by default), the request is forwarded to the corresponding target service for processing. Click |image1|. The **Add Route** dialog box is displayed.
 
    -  **Domain Name**
 
@@ -72,8 +72,8 @@ Procedure
 
    -  **URL Matching Rule**
 
-      -  **Prefix**: A URL can be accessed if its prefix is the same as that you configure. For example, **/healthz/v1** and **/healthz/v2**.
-      -  **Exact**: Only the URL that fully matches the values you set can be accessed. For example, if the URL is set to **/healthz**, only **/healthz** can be accessed.
+      -  **Prefix match**: A URL can be accessed if its prefix is the same as the URL you set. For example, if the URL is set to **/healthz**, **/healthz/v1** and **/healthz/v2** can be accessed.
+      -  **Full match**: Only the URL that fully matches the URL you set can be accessed. For example, if the URL is set to **/healthz**, only **/healthz** can be accessed.
 
    -  **URL**
 
@@ -81,13 +81,13 @@ Procedure
 
    -  **Namespace**
 
-      Select the namespace to which the gateway belongs.
+      Select the namespace that the gateway belongs to.
 
    -  **Target Service**
 
       Service of the gateway. Select a value from the drop-down list box. The target service is filtered based on the corresponding gateway protocol. For details about the filtering rules, see :ref:`Why Cannot I Select the Corresponding Service When Adding a Route? <asm_faq_0035>`
 
-      The service which configuration diagnosis fails cannot be selected. You need to fix the issues first. For details, see :ref:`Manual Fixing Items <asm_01_0060>` or :ref:`Auto Fixing Items <asm_01_0065>`.
+      The service which configuration diagnosis fails cannot be selected. You need to fix the issues first. For details, see :ref:`Fixing Items Manually <asm_01_0060>` or :ref:`Fixing Items Automatically <asm_01_0065>`.
 
    -  **Access Port**
 
@@ -97,10 +97,10 @@ Procedure
 
       (This parameter is configurable when the external protocol is HTTP.)
 
-      Rewrite the HTTP URI and host/authority header before forwarding. Disabled by default. To enable it, configure the following parameters:
+      Rewrite the HTTP URI and host/authority header before forwarding. This option is disabled by default. To enable it, configure the following parameters:
 
-      -  URI: This value is used to rewrite the URI or prefix.
-      -  Host/Authority Header: This value is used to rewrite the HTTP host/authority header.
+      -  **URI**: used to rewrite the URI or prefix. If the original path is matched by prefix, the value provided in this field replaces the corresponding matched prefix.
+      -  **Host/Authority Header**: used to rewrite the HTTP host/authority header.
 
 #. Click **OK**.
 

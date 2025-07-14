@@ -12,7 +12,7 @@ Introduction
 
 Grayscale releases enable smooth iteration of software products in production environments. This section takes Bookinfo as an example to illustrate Istio-based service governance using ASM.
 
-The grayscale release process of Bookinfo is as follows.
+The grayscale release process of Bookinfo is as follows:
 
 
 .. figure:: /_static/images/en-us_image_0000001202041610.png
@@ -40,7 +40,7 @@ The reviews service has three versions:
 
 .. note::
 
-   To demonstrate traffic switching between versions, this section takes 1.17.1 (rating with black stars) and 1.17.2 (rating with red stars) of the reviews service as examples.
+   To demonstrate traffic switchover between versions, this section takes 1.17.1 (rating with black stars) and 1.17.2 (rating with red stars) of the reviews service as examples.
 
 
 .. figure:: /_static/images/en-us_image_0000001440024745.png
@@ -247,7 +247,7 @@ Creating a Grayscale Release Task
 
 A new grayscale version of the **reviews** service of Bookinfo will be created. A grayscale policy will be configured to divert traffic of the default version to the new version.
 
-The following steps will guide you to create a new version (v3) of the **reviews** service and divert 30% traffic of Bookinfo to this version.
+The following steps will guide you to create a version (v3) for the **reviews** service and divert 30% traffic of Bookinfo to this version.
 
 **Deploying a grayscale version**
 

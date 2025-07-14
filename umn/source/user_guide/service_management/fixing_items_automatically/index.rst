@@ -2,12 +2,12 @@
 
 .. _asm_01_0065:
 
-Auto Fixing Items
-=================
+Fixing Items Automatically
+==========================
 
 -  :ref:`The Service Port Name Complies with the Istio Specifications <asm_01_0066>`
 -  :ref:`The Service Selector Cannot Contain version Labels <asm_01_0067>`
--  :ref:`The Service Is Configured with a Default-version Route and The Route Configuration Is Correct <asm_01_0069>`
+-  :ref:`The Service Is Configured with a Default-Version Route and the Route Configuration Is Correct <asm_01_0069>`
 
 .. toctree::
    :maxdepth: 1

@@ -2,13 +2,13 @@
 
 .. _asm_faq_0005:
 
-Why Cannot I Access the page of the Demo Application After It Is Successfully Deployed?
-=======================================================================================
+Why Cannot I Access the Page of the Deployed Demo Application?
+==============================================================
 
 Symptom
 -------
 
-The page of the demo application cannot be accessed after the application is successfully deployed.
+The page of the deployed demo application cannot be accessed.
 
 Analysis
 --------

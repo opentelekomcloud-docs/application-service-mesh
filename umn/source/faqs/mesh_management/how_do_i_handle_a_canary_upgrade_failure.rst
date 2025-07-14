@@ -31,11 +31,13 @@ There are many reasons for a canary upgrade failure. In case of a canary upgrade
 
    **Solution**: Use the cluster version listed in the following table.
 
-   ==================== ================================
-   Service Mesh Version Supported Cluster Version
-   1.15                 1.21, 1.23, 1.25, and 1.27
-   1.18                 1.25, 1.27, 1.28, 1.29, and 1.30
-   ==================== ================================
+   +----------------------+-------------------------------------------------------+
+   | Service Mesh Version | Supported Cluster Version                             |
+   +----------------------+-------------------------------------------------------+
+   | 1.15                 | 1.21, 1.23, 1.25, 1.27, and 1.28                      |
+   +----------------------+-------------------------------------------------------+
+   | 1.18                 | 1.25, 1.27, and 1.28, as well as 1.29, 1.30, and 1.31 |
+   +----------------------+-------------------------------------------------------+
 
 #. Failed to check the component affinity before the upgrade.
 

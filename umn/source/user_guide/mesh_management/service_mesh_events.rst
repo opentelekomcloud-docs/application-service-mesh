@@ -12,7 +12,7 @@ ASM supports the event center, which allows you to query details about important
 
 .. note::
 
-   You can view events in a Basic service mesh (based on Istio 1.15 or later).
+   You can view events in a Basic service mesh of 1.15 or later.
 
 Procedure
 ---------

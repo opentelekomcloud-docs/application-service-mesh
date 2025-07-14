@@ -15,7 +15,7 @@ Rectification Guide
 
 #. Log in to the CCE console and click the cluster name to go to the cluster console.
 
-#. In the navigation pane, choose **Services & Ingresses**. Click the **Service** tab, search for the Service by cluster name and namespace, click **Edit YAML**. Then, view **spec.selector** and delete the **version** label.
+#. In the navigation pane, choose **Services & Ingresses**. On the **Service** tab, search for the Service by cluster name and namespace, click **Edit YAML**. Then, view **spec.selector** and delete the **version** label.
 
    |image1|
 

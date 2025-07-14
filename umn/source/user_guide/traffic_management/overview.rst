@@ -38,4 +38,4 @@ ASM provides retry, timeout, connection pool, outlier detection, load balancing,
 Constraints
 -----------
 
-Traffic management cannot be performed for the service whose configuration diagnosis fails. For details about rectifying faults, see :ref:`Manual Fixing Items <asm_01_0060>` or :ref:`Auto Fixing Items <asm_01_0065>`.
+Traffic management cannot be performed for the service whose configuration diagnosis fails. For details about rectifying faults, see :ref:`Fixing Items Manually <asm_01_0060>` or :ref:`Fixing Items Automatically <asm_01_0065>`.

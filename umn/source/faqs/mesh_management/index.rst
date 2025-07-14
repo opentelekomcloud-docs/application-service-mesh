@@ -9,7 +9,7 @@ Mesh Management
 -  :ref:`Why Are Exclusive Nodes Still Exist After Istio Is Uninstalled? <asm_faq_0022>`
 -  :ref:`How Do I Enable Namespace Injection for a Cluster? <asm_faq_0036>`
 -  :ref:`How Do I Disable Sidecar Injection for Workloads? <asm_faq_0037>`
--  :ref:`What Can I Do If A Pod Cannot Be Started Due to Unready Sidecar <asm_faq_0039>`
+-  :ref:`What Can I Do If a Pod Cannot Be Started Due to Unready Sidecar? <asm_faq_0039>`
 -  :ref:`How Do I Handle a Canary Upgrade Failure? <asm_faq_0044>`
 
 .. toctree::

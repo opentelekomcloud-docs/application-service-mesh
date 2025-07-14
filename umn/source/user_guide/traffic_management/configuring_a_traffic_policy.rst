@@ -31,7 +31,7 @@ Configuring a Traffic Policy
 
    **Timeout**
 
-   Auto processing and quickly failure return upon service access timeout eliminate resource locking and request freezing.
+   If no response is received within the timeout duration, access to the service is considered as a failure to prevent resource locks and request blocks.
 
    On the **Timeout** tab, click **Configure now**. In the displayed dialog box, set the parameters listed in the table below.
 
@@ -105,7 +105,7 @@ Configuring a Traffic Policy
 
    **Load Balancing**
 
-   You can customize a load balancing policy to target backend service pods.
+   You can create a custom load balancing policy for selecting service pods.
 
    On the **Load Balancing** tab, click **Configure now**. In the displayed dialog box, select one of the following load balancing algorithms as required:
 

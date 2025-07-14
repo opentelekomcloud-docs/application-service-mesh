@@ -105,17 +105,17 @@ Procedure
 
       If you do not need to access the Zipkin UI, set **Access Type** to **ClusterIP**.
 
-#. Buy a service mesh and interconnect it with Zipkin.
+#. create a service mesh and connect it to Zipkin.
 
-   Log in to the ASM console and click . In **Cluster Configuration**, select the cluster in :ref:`1 <asm_faq_0049__li098232175213>`. In **Observability Configuration**, enable tracing. Then, select **Third-party Jaeger/Zipkin service** for **Version**, set **Service Address** and **Access Port**, and configure other parameters as required.
+   Log in to the ASM console and click **Create Mesh**. In **Cluster Configuration**, select the cluster in :ref:`1 <asm_faq_0049__li098232175213>`. In **Observability Configuration**, enable tracing. Then, select **Third-party Jaeger/Zipkin service** for **Version**, set **Service Address** and **Access Port**, and configure other parameters as required.
 
    .. caution::
 
-      The value of **Service Address** is *{Service name}*\ **.**\ *{Namespace}*\ **.svc.cluster.local**. Replace *{Service name}* and *{Namespace}* with those specified in :ref:`2 <asm_faq_0049__li139077291524>`.
+      **Service Address** is in the format of *{Service name}*\ **.**\ *{Namespace}*\ **.svc.cluster.local**. Replace *{Service name}* and *{Namespace}* with those specified in :ref:`2 <asm_faq_0049__li139077291524>`.
 
-      The value of **Access Port** is that specified in :ref:`2 <asm_faq_0049__li139077291524>`.
+      **Access Port** is that specified in :ref:`2 <asm_faq_0049__li139077291524>`.
 
-#. . After the deployment is complete, the services shown in the following figure are displayed on the **Service Management** page.
+#. After the deployment is complete, the **details**, **productpage**, **ratings**, and **reviews** services are displayed on the **Service Management** page.
 
 #. Access the productpage details page to trigger tracing.
 

@@ -38,4 +38,4 @@ If sidecar injection is enabled for a namespace of a cluster, sidecars are autom
    For more details about sidecar injection, see `Automatic Sidecar Injection <https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#controlling-the-injection-policy>`__.
 
 .. |image1| image:: /_static/images/en-us_image_0000001223579300.png
-.. |image2| image:: /_static/images/en-us_image_0000001997321585.png
+.. |image2| image:: /_static/images/en-us_image_0000002373720729.png

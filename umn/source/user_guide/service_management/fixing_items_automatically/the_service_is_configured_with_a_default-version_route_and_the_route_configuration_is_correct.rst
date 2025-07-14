@@ -2,7 +2,7 @@
 
 .. _asm_01_0069:
 
-The Service Is Configured with a Default-version Route and The Route Configuration Is Correct
+The Service Is Configured with a Default-Version Route and the Route Configuration Is Correct
 =============================================================================================
 
 Description

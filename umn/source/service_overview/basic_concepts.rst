@@ -31,7 +31,7 @@ Blue-green deployment is a zero-downtime deployment mode. A new version of an ap
 Traffic Management
 ------------------
 
-Traffic management provides you with visualized network statuses of cloud native applications and allows you to manage and configure network connections and security policies online. Currently, it supports connection pool, outlier detection, load balancing, HTTP header, fault injection, etc.
+Traffic management provides you with visualized network statuses of cloud native applications and allows you to manage and configure network connections and security policies online. Currently, it supports functions such as connection pool, outlier detection, load balancing, HTTP header, and fault injection.
 
 Connection Pool Management
 --------------------------

@@ -5,9 +5,9 @@
 Introduction
 ============
 
-Dubbo is a special protocol which needs the following supports:
+Dubbo is a special protocol. The following functions must be provided:
 
--  Envoy on the service mesh data plane supports the parsing and traffic management of the Dubbo protocol.
--  The mesh control plane supports the configuration of Dubbo governance rules to manage services such as grayscale release, load balancing, and access authorization.
+-  Envoy on the service mesh data plane parses protocols and manages traffic of Dubbo.
+-  The service mesh control plane supports Dubbo governance rules and service management such as grayscale release, load balancing, and access authorization.
 
-In addition, the service discovery model of Dubbo is different from that of Kubernetes and Spring Cloud. Therefore, additional processing is required.
+In addition, the service discovery model of Dubbo is different from that of Kubernetes or Spring Cloud. Additional processing is required.

@@ -6,13 +6,13 @@ Service Management
 ==================
 
 -  :ref:`Configuration Diagnosis <asm_01_0031>`
--  :ref:`Manual Fixing Items <asm_01_0060>`
--  :ref:`Auto Fixing Items <asm_01_0065>`
+-  :ref:`Fixing Items Manually <asm_01_0060>`
+-  :ref:`Fixing Items Automatically <asm_01_0065>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
    configuration_diagnosis
-   manual_fixing_items/index
-   auto_fixing_items/index
+   fixing_items_manually/index
+   fixing_items_automatically/index

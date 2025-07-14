@@ -42,14 +42,14 @@ Istio aims to achieve scalability and meet various deployment requirements.
 Features
 --------
 
-**Grayscale release**
+**Grayscale Release**
 
 -  Grayscale policies based on request content: You can set criteria based on request content, such as header and cookie. Only requests meeting the criteria will be distributed to the grayscale version.
 -  Grayscale policies based on traffic ratio: You can set specific ratio for the traffic to be distributed to the grayscale version.
 -  Canary release: Guidance will be provided to help you perform canary release on a service, including rolling out a grayscale version, observing the running and traffic of the grayscale version, configuring grayscale release policies, and diverging the traffic.
 -  Blue-green deployment: Guidance will be provided to help you perform blue-green deployment on a service, including rolling out a grayscale version, observing the running of the grayscale version, observing the traffic, and switching the traffic.
 
-**Traffic management**
+**Traffic Management**
 
 -  Layer-7 connection pool management: You can set the maximum number of HTTP requests, maximum number of retry times, maximum number of pending requests, maximum number of requests for each connection, and maximum connection idle period.
 -  Layer-4 connection pool management: You can set the maximum TCP connections, connection timeout duration, maximum non-responses, minimum idle period, and health check interval.
@@ -63,20 +63,19 @@ Features
 **Security**
 
 -  Peer authentication: Peer authentication defines how traffic reaches the current service pod through the tunnel (or not through the tunnel). Currently, three authentication policies are supported: **UNSET**, **PERMISSIVE**, and **STRICT**.
--  Access authorization: Access authorization controls the access to services in the mesh and determines whether a request can be sent to the current service.
+-  Access authorization: Access authorization controls the access to services in a service mesh and determines whether a request can be sent to the current service.
 
 **Observability**
 
--  Application access topology: An application access topology shows the dependencies between services.
 -  Service running monitoring: Service access information, including service information, different versions of the service, QPS, and latency can be monitored.
--  Access logs: Service access logs can be collected and searched.
+-  Tracing: Non-intrusive tracing points. You can use the tracing data to demarcate and locate faults.
 
-**Framework of the mesh data plane**
+**Data Plane Framework**
 
 -  Spring Cloud: supports unified management of services developed using Spring Cloud SDK.
 -  Dubbo: supports unified management of services developed using Dubbo SDK.
 
-**Compatibility and extension**
+**Compatibility and Extension**
 
--  Community compatibility: ASM APIs are fully compatible with the Istio community.
+-  Community compatibility: ASM APIs are fully compatible with Istio.
 -  Support for community add-ons: Tracing, Prometheus, Kiali, and Grafana are supported.
