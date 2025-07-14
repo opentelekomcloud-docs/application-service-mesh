@@ -26,7 +26,7 @@ Elastic Load Balance (ELB)
 
 ELB automatically distributes access traffic to multiple cloud servers to balance the loads. It enhances an application's fault tolerance and service continuity.
 
-You can use ELB to access ASM from outside.
+You can use ELB to access ASM from external networks.
 
 Application Performance Management (APM)
 ----------------------------------------

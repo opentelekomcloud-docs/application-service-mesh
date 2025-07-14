@@ -2,11 +2,11 @@
 
 .. _asm_faq_0039:
 
-What Can I Do If A Pod Cannot Be Started Due to Unready Sidecar
-===============================================================
+What Can I Do If a Pod Cannot Be Started Due to Unready Sidecar?
+================================================================
 
-Description
------------
+Symptom
+-------
 
 Pods of services managed by a mesh may fail to be started and keep restarting. When the service container communicates with external systems, the traffic passes through the **istio-proxy** container. However, the service container is started earlier than the **istio-proxy** container. As a result, the communication with external systems fails and the pod keeps restarting.
 
@@ -35,6 +35,20 @@ The switch can be configured globally or locally. The following describes two wa
 
       |image1|
 
+      .. caution::
+
+         Perform the following operations only in Istio 1.18.7-r4 or later.
+
+         After running the **kubectl edit iop** command to edit the parameter to be modified, change the value of **install.istio.io/ignoreReconcile** to **false**, save the modification, and exit.
+
+         |image2|
+
+         Run the **kubectl get iop -n istio-system** command to check the IOP status. Wait until the value of **STATUS** changes to **HEALTHY**.
+
+         |image3|
+
+         Change the value of **install.istio.io/ignoreReconcile** to **true**.
+
    #. Run the following command to check whether the latest logs contain no error information:
 
       **kubectl logs -n istio-operator $(kubectl get po -n istio-operator \| awk '{print $1}' \| grep -v NAME)**
@@ -43,7 +57,7 @@ The switch can be configured globally or locally. The following describes two wa
 
       **kubectl get iop -n istio-system**
 
-      |image2|
+      |image4|
 
    #. Run the following command to upgrade the services in the mesh in a rolling manner:
 
@@ -55,13 +69,13 @@ The switch can be configured globally or locally. The following describes two wa
 
       **kubectl get pod -n** *default* **\| grep** *nginx*
 
-      |image3|
+      |image5|
 
    #. Run the following command to check whether **postStart lifecycle** is added to the pod and whether the **istio-proxy** container is placed in the first position:
 
       **kubectl edit pod** *nginx-7bc96f87b9-l4dbl*
 
-      |image4|
+      |image6|
 
 -  **Local Configuration**
 
@@ -78,10 +92,12 @@ The switch can be configured globally or locally. The following describes two wa
       proxy.istio.io/config: |
         holdApplicationUntilProxyStarts: true
 
-   |image5|
+   |image7|
 
-.. |image1| image:: /_static/images/en-us_image_0000001416062808.png
-.. |image2| image:: /_static/images/en-us_image_0000001416224808.png
-.. |image3| image:: /_static/images/en-us_image_0000001416065480.png
-.. |image4| image:: /_static/images/en-us_image_0000001466625829.png
-.. |image5| image:: /_static/images/en-us_image_0000001416387696.png
+.. |image1| image:: /_static/images/en-us_image_0000002339842264.png
+.. |image2| image:: /_static/images/en-us_image_0000002241895141.png
+.. |image3| image:: /_static/images/en-us_image_0000002242015001.png
+.. |image4| image:: /_static/images/en-us_image_0000001416224808.png
+.. |image5| image:: /_static/images/en-us_image_0000001416065480.png
+.. |image6| image:: /_static/images/en-us_image_0000002373730569.png
+.. |image7| image:: /_static/images/en-us_image_0000001416387696.png

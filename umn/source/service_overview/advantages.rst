@@ -8,14 +8,14 @@ Advantages
 Ease of Use
 -----------
 
-The out-of-the-box usability allows you to use a service mesh without code rewrite or manual installation.
+The out-of-the-box features allow you to use a service mesh without code rewrite or manual installation.
 
 Built-in Canary Release and Blue-Green Deployment
 -------------------------------------------------
 
 -  Deployment of the grayscale version and traffic switchover with a few clicks
 -  Configurable grayscale policy that can be set based on traffic ratio and request content (cookies, OSs, and browsers)
--  One-stop health, performance, and traffic monitoring, achieving quantified, intelligent, and visualized grayscale release
+-  One-stop health and performance monitoring as well as traffic monitoring, achieving quantified, intelligent, and visualized grayscale release
 
 Policy-based Intelligent Routing and Flexible Traffic Management
 ----------------------------------------------------------------
@@ -33,8 +33,8 @@ Enhanced Performance and Reliability
 
 The performance and reliability of the control plane and data plane are enhanced based on the community version.
 
-Multi-infrastructure
---------------------
+Multi-Infrastructure Management
+-------------------------------
 
 An O&M-free hosting control plane is provided. Unified service governance, grayscale release, security, and service running monitoring capabilities are supported. Unified service discovery and management of multiple infrastructure resources such as containers and VMs are provided.
 

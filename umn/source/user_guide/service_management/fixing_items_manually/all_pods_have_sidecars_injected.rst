@@ -13,7 +13,7 @@ An **istio-proxy** container must exist in all pods of a Service. Otherwise, thi
 Rectification Guide
 -------------------
 
-#. Log in to the ASM console and click the name of the service mesh that the Service is added to. Choose **Mesh Configuration** in the navigation pane, click the **Sidecar Management** tab, and check whether a sidecar is injected into the namespace that the Service belongs to.
+#. Log in to the ASM console and click the name of the service mesh that the Service is added to. In the navigation pane, choose **Mesh Configuration**. On the displayed page, click the **Sidecar Management** tab. Then, check whether a sidecar is injected into the namespace that the Service belongs to.
 
    -  If the sidecar is not injected into the namespace, go to :ref:`2 <asm_01_0063__li1665121115612>`.
 
@@ -33,7 +33,7 @@ Rectification Guide
 
 #. .. _asm_01_0063__li1665121115612:
 
-   Inject a sidecar into a workload or inject sidecars into the pods of all workloads in the namespace. For details, see :ref:`Injecting a Sidecar <asm_01_0041__section65931513505>`.
+   Inject a sidecar into a workload or inject sidecars into the pods of all workloads in the namespace.
 
    Injection methods:
 
@@ -59,14 +59,21 @@ Rectification Guide
 
    -  Injecting a sidecar into a workload
 
-      On the CCE console, locate the target workload, choose **More** > **Edit YAML** in the **Operation** column, and manually add the **annotations** field.
+      On the CCE console, locate the target workload, choose **More** > **Edit YAML** in the **Operation** column, and manually add the **annotations** or **labels** field based on your Istio version.
 
-      .. code-block::
+      -  For 1.13.9-r3 and later versions, 1.15.5-r2 and later versions, and all 1.18 versions, the configuration is follows:
 
-               annotations:
-                 sidecar.istio.io/inject: 'true'
+         .. code-block::
 
-      |image2|
+                  labels:
+                    istio.io/rev=<revision>
+
+      -  For 1.13.9-r3 and earlier versions as well as 1.15.5-r2 and earlier versions, the configuration is follows:
+
+         .. code-block::
+
+                  annotations:
+                    istio-injection: enabled
 
    For more details about sidecar injection, see `Installing the Sidecar <https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/>`__.
 
@@ -80,12 +87,11 @@ Rectification Guide
 
    On the CCE console, choose **More** > **Edit YAML** in the **Operation** column of the target workload, and check whether **spec.template.spec.hostNetwork: true** is configured. If yes, check whether this field can be deleted or set to **false**. Otherwise, sidecars cannot be injected.
 
-   |image3|
+   |image2|
 
 #. Check whether the number of pods exceeds the service mesh scale.
 
-   If the number exceeds , the excess pods cannot be injected with sidecars.
+   If the number exceeds, the excess pods cannot be injected with sidecars.
 
 .. |image1| image:: /_static/images/en-us_image_0000002086005592.png
-.. |image2| image:: /_static/images/en-us_image_0000001394586873.png
-.. |image3| image:: /_static/images/en-us_image_0000001344069664.png
+.. |image2| image:: /_static/images/en-us_image_0000001344069664.png

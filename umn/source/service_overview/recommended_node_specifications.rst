@@ -10,11 +10,11 @@ Recommended Specifications for Exclusive Nodes:
 
 The performance of ASM is closely related to the cluster control plane (master nodes). Select appropriate node specifications based on your service requirements.
 
-+---------------------------------+--------------------------+---------------------------+
-| Total QPS (requests per second) | 0-20,000                 | 20,000-60,000             |
-+---------------------------------+--------------------------+---------------------------+
-| Specifications                  | 8 vCPUs and 16 GB memory | 16 vCPUs and 32 GB memory |
-+---------------------------------+--------------------------+---------------------------+
++---------------------------------+------------------------------+-------------------------------+
+| Total QPS (requests per second) | 0 to 20,000                  | 20,000 to 60,000              |
++---------------------------------+------------------------------+-------------------------------+
+| Specifications                  | 8 vCPUs and 16 GiB of memory | 16 vCPUs and 32 GiB of memory |
++---------------------------------+------------------------------+-------------------------------+
 
 .. note::
 

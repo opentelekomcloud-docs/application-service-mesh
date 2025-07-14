@@ -29,10 +29,10 @@ For such a grayscale policy that is based on traffic ratio, you can gradually in
 
 **Modifying a grayscale policy that is based on request content**
 
-With such a policy, a grayscale version can be accessed only when the traffic meets the rules based on Cookies, Headers, Queries, Allowed Operating Systems, and Allowed Browsers. In real-world use cases, rules may be modified for multiple times to fully verify the performance of the grayscale version.
+With such a policy, a grayscale version can be accessed only when the traffic meets the rules based on cookies, headers, queries, allowed operating systems, and allowed browsers. In real-world use cases, rules may be modified for multiple times to fully verify the performance of the grayscale version.
 
 #. Log in to the ASM console and click the name of the target service mesh to go to its details page.
-#. In the navigation pane on the left, choose **Grayscale Release** and click the target canary release task.
+#. In the navigation pane, choose **Grayscale Release**. Then click the target canary release task.
 #. On the **Configure Traffic Policy** page, reconfigure **Cookie**, **Header**, **Query**, **Allowed OS**, and **Allowed Browser**.
 #. Click **Deliver Policy**.
 
@@ -46,7 +46,7 @@ You can change the type of a grayscale policy from **based on request content** 
    Grayscale policies can be changed only for running tasks. After a grayscale version is released (that is, the new version completely takes over the traffic and the old version has been brought offline), its grayscale policy cannot be reconfigured.
 
 #. Log in to the ASM console and click the name of the target service mesh to go to its details page.
-#. In the navigation pane on the left, choose **Grayscale Release** and click the target canary release task.
+#. In the navigation pane, choose **Grayscale Release**. Then click the target canary release task.
 #. On the **Configure Traffic Policy** page, change the policy type.
 #. Click **Deliver Policy**.
 

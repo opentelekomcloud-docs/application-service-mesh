@@ -13,7 +13,7 @@ Container-based infrastructure brings a series of new challenges. It is necessar
 Product Benefits
 ----------------
 
-ASM generates detailed telemetry for all service communications within the mesh. It provides observability of service behaviors and allows operators to easily troubleshoot, maintain, and optimize their applications. With ASM, operators can better understand how services interact with other services and their components.
+ASM generates detailed telemetry for all service communications within the service mesh. It provides observability of service behaviors and allows operators to easily troubleshoot, maintain, and optimize their applications. With ASM, operators can better understand how services interact with other services and their components.
 
 Product Advantages
 ------------------

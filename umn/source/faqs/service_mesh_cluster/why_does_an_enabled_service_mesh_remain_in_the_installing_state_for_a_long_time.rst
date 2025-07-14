@@ -2,13 +2,13 @@
 
 .. _asm_faq_0030:
 
-Why Does a Service Mesh Remain in the Installing State for a Long Time After I Enable It for a Cluster?
-=======================================================================================================
+Why Does an Enabled Service Mesh Remain in the Installing State for a Long Time?
+================================================================================
 
 Symptom
 -------
 
-After I create a service mesh (that is, create a Dedicated service mesh) for a CCE cluster, it remains in the installing state for a long time and a message is displayed indicating that the user security group rules are successfully enabled.
+After I enable a service mesh (create a service mesh) for a CCE cluster, it remains in the installing state for a long time and a message is displayed indicating that the Istio-based service mesh is being enabled and the security group rules are successfully enabled.
 
 Fault Diagnosis
 ---------------

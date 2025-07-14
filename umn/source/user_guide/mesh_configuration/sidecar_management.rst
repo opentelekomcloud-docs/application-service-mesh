@@ -30,7 +30,7 @@ You can view the namespace and cluster that the injected sidecar belongs to. If 
 
    -  **Restart Existing Services**
 
-      |image1|: Enabling **Restart Existing Services** will restart the associated pods and temporarily interrupt your services. New pods will have istio-proxy sidecars automatically injected.
+      |image1|: Enabling **Restart Existing Services** will restart the pods of existing services and temporarily interrupt your services. New pods will have istio-proxy sidecars automatically injected.
 
       -  If you select a new namespace, an automatic injection label is added. After all pods running the Deployment in that namespace are restarted, the istio-proxy sidecars will be automatically injected into new pods.
 
@@ -38,7 +38,7 @@ You can view the namespace and cluster that the injected sidecar belongs to. If 
 
       -  If there are pods that are not injected with sidecars in selected namespaces, all pods running the Deployment will be restarted to inject sidecars. If all pods have sidecars injected, the pods will not be restarted.
 
-      |image2|: When you do not enable **Restart Existing Services**, the istio-proxy sidecars cannot be automatically injected into the associated pods. You need to manually restart the workload on the CCE console to inject sidecars. This parameter affects only existing services. If the namespaces are labeled with **istio-injection=enabled**, sidecars will be automatically injected into new pods.
+      |image2|: When you do not enable **Restart Existing Services**, the istio-proxy sidecars cannot be automatically injected into the pods of existing services. In this case, you need to manually restart the pods on the CCE console to inject the sidecars. This parameter affects only existing services. If the namespaces are labeled with **istio-injection=enabled**, sidecars will be automatically injected into new pods.
 
    -  **Traffic Interception Settings**
 
@@ -58,7 +58,7 @@ You can view the namespace and cluster that the injected sidecar belongs to. If 
 
       -  **Exclude only specified ports** means that the traffic from services in a service mesh over the ports except the specified ports will be redirected to the sidecar.
 
-      **Outbound IP Ranges**: IP address ranges separated by commas (,) in CIDR format. You can use this field to specify the IP ranges that will be excluded from redirection to the sidecar.
+      **Outbound IP Ranges**: IP address ranges separated by commas (,) in CIDR format. You can use this field to specify the IP ranges that will be included or excluded for outbound traffic redirection.
 
       -  **Include only specified IP ranges** means that the traffic from specified IP ranges will be redirected to the sidecar.
 

@@ -23,7 +23,7 @@ Rectification Guide
 
 #. Log in to the CCE console and click the cluster name to go to the cluster console.
 
-#. In the navigation pane, choose **Services & Ingresses**. Click the **Service** tab, search for the Service by cluster name and namespace, and click **Edit YAML**. Then, view the Service protocol and add a protocol type before the Service name.
+#. In the navigation pane, choose **Services & Ingresses**. On the **Service** tab, search for the Service by cluster name and namespace, and click **Edit YAML**. Then, view and modify the Service protocol and add the protocol type before the Service name.
 
    |image1|
 

@@ -2,8 +2,8 @@
 
 .. _asm_faq_0031:
 
-Why Does a Service Mesh Remain in the Unready State for a Long Time After I Uninstall It?
-=========================================================================================
+Why Does an Uninstalled Service Mesh Remain in the Unready State for a Long Time?
+=================================================================================
 
 Symptom
 -------

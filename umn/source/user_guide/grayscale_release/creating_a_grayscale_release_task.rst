@@ -41,7 +41,7 @@ Creating a Grayscale Release Task
 
    -  **Namespace**
 
-      Select the namespace to which the service belongs.
+      Select the namespace that the service belongs to.
 
    -  **Service**
 
@@ -95,11 +95,11 @@ Creating a Grayscale Release Task
 
          **Figure 1** Based on traffic ratio
 
-      **Traffic** **ratio**: You can set the traffic ratio for the original version and grayscale version. The system distributes traffic to the two versions based on the specific traffic ratio.
+      You can set the traffic ratio for the original version and grayscale version. The system distributes traffic to the two versions based on the specific traffic ratio.
 
    -  **Based on request content**
 
-      The grayscale version can be accessed only when the traffic meets the rules based on the cookies, custom headers, queries, operating systems, and browsers. For example, only HTTP requests whose cookies meet **User=Internal** can be forwarded to the grayscale version. Other requests are still received by the original version.
+      With such a policy, a grayscale version can be accessed only when the traffic meets the rules based on cookies, headers, queries, allowed operating systems, and allowed browsers. For example, only HTTP requests whose cookies meet **User=Internal** can be forwarded to the grayscale version. Other requests are still received by the original version.
 
 
       .. figure:: /_static/images/en-us_image_0000001210119300.png
@@ -113,15 +113,15 @@ Creating a Grayscale Release Task
 
       -  **Header**
 
-         -  **Full match**: Only the URL that fully matches the values you set can be accessed. For example, if **Key** is set to **User** and **Value** is set to **Internal**, only requests whose headers contain **User** with the value **Internal** are responded by the service of the grayscale version.
+         -  **Full match**: Only the header that fully matches the values you set can be used for service access. For example, if **Key** is set to **User** and **Value** is set to **Internal**, only requests whose headers contain **User** with the value **Internal** are responded by the grayscale version.
 
          -  **Regular expression**: When the header of a request matches the configured regular expression, the request will be distributed to the grayscale version.
 
-            You can customize the key and value for filtering. The value supports the full match and regular expression.
+            You can create custom key and value. The value supports the full match and regular expression.
 
       -  **Query**
 
-         -  **Full match**: Only the URL that fully matches the values you set can be accessed. For example, if **Key** is set to **User** and **Value** is set to **Internal**, only requests whose queries contain **User** with the value **Internal** are responded by the service of the grayscale version.
+         -  **Full match**: Only the query that fully matches the values you set can be used for service access. For example, if **Key** is set to **User** and **Value** is set to **Internal**, only requests whose queries contain **User** with the value **Internal** are responded by the grayscale version.
 
          -  **Regular expression**: When the query of a request matches the configured regular expression, the request will be distributed to the grayscale version.
 

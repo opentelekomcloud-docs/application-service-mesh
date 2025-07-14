@@ -40,6 +40,20 @@ When injecting a sidecar to the namespace of a cluster, if the namespace injecti
             remotePilotAddress: *.*.*.*
             tag: 1.8.6-r1-20220512225026
 
+   .. caution::
+
+      Perform the following operations only in Istio 1.18.7-r4 or later.
+
+      After running the **kubectl edit iop** command to edit the parameter to be modified, change the value of **install.istio.io/ignoreReconcile** to **false**, save the modification, and exit.
+
+      |image3|
+
+      Run the **kubectl get iop -n istio-system** command to check the IOP status. Wait until the value of **STATUS** changes to **HEALTHY**.
+
+      |image4|
+
+      Change the value of **install.istio.io/ignoreReconcile** to **true**.
+
 #. .. _asm_faq_0036__li797012579155:
 
    Run the **kubectl edit cm -nistio-system istio-sidecar-injector** command to modify the **istio-sidecar-injector** configuration item.
@@ -52,3 +66,5 @@ When injecting a sidecar to the namespace of a cluster, if the namespace injecti
 
 .. |image1| image:: /_static/images/en-us_image_0000001270399104.png
 .. |image2| image:: /_static/images/en-us_image_0000001321081541.png
+.. |image3| image:: /_static/images/en-us_image_0000002241895141.png
+.. |image4| image:: /_static/images/en-us_image_0000002242015001.png

@@ -2,8 +2,8 @@
 
 .. _asm_01_0060:
 
-Manual Fixing Items
-===================
+Fixing Items Manually
+=====================
 
 -  :ref:`All Pods Have the app and version Labels <asm_01_0061>`
 -  :ref:`All Pods Share the Same app and version Labels <asm_01_0062>`

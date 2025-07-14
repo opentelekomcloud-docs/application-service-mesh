@@ -13,8 +13,8 @@ Application Scenarios
 -  If an IPv6 address is required for service access and traffic management, you can enable IPv4/IPv6 dual stack.
 -  If you provide services for users who use IPv6 clients, you can create a gateway for a service mesh with IPv4/IPv6 dual stack enabled.
 
-Constraints
------------
+Notes and Constraints
+---------------------
 
 -  Conditions for enabling IPv4/IPv6 dual stack for a service mesh
 
@@ -51,7 +51,7 @@ Creating a Service Mesh with IPv6 Addresses
 
 #. Click the service mesh name to access the details page.
 
-   On the **Mesh Configuration** > **Basic Information** tab, you can see that IPv4/IPv6 dual stack has been enabled.
+   On the **Basic Information** tab (**Mesh Configuration** > **Basic Information**), you can see that IPv4/IPv6 dual stack has been enabled.
 
 Adding an IPv4/IPv6 Dual-Stack Gateway
 --------------------------------------
