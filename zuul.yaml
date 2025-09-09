@@ -8,7 +8,6 @@
       sphinx_pdf_files:
         - asm-umn.pdf
         - asm-api-ref.pdf
-        - asm-best-practice.pdf
     check:
       jobs:
         - noop
