@@ -5,11 +5,11 @@
 Service Overview
 ================
 
--  :ref:`Infographic for ASM <asm_productdesc_0017>`
 -  :ref:`Introduction <asm_productdesc_0001>`
 -  :ref:`Advantages <asm_productdesc_0002>`
 -  :ref:`Application Scenarios <asm_productdesc_0003>`
 -  :ref:`Notes and Constraints <asm_productdesc_0004>`
+-  :ref:`Permissions <asm_productdesc_0019>`
 -  :ref:`Basic Concepts <asm_productdesc_0005>`
 -  :ref:`Recommended Node Specifications <asm_productdesc_0006>`
 -  :ref:`Related Services <asm_productdesc_0007>`
@@ -18,11 +18,11 @@ Service Overview
    :maxdepth: 1
    :hidden: 
 
-   infographic_for_asm
    introduction
    advantages
    application_scenarios/index
    notes_and_constraints
+   permissions
    basic_concepts
    recommended_node_specifications
    related_services
