@@ -82,7 +82,7 @@ Procedure
 
          .. note::
 
-            -  Only Istio 1.15 or later support the third-party tracing service.
+            -  Only Istio 1.15 and later versions support third-party tracing services.
             -  If you want to use the third-party Jaeger or Zipkin service, install it first. Then, obtain the service address.
             -  The default service ports of Jaeger and Zipkin are both 9411. If you create a custom service port during Jaeger or Zipkin installation, replace **Service Port** with the actual value.
 

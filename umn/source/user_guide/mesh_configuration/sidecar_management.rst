@@ -26,7 +26,7 @@ You can view the namespace and cluster that the injected sidecar belongs to. If 
 
       -  **istio-injection=enabled** can be used in Istio 1.13.9-r3 and earlier versions, as well as Istio 1.15.5-r2 and earlier versions.
 
-      -  **istio.io/rev=<revision>** can be used in Istio later than 1.13.9-r3, Istio later than 1.15.5-r2, and all Istio 1.18 versions.
+      -  **istio.io/rev=<revision>** can be used in Istio later than 1.13.9-r3, Istio later than 1.15.5-r2, all Istio 1.18 versions, and all Istio 1.28 versions.
 
    -  **Restart Existing Services**
 
@@ -38,7 +38,13 @@ You can view the namespace and cluster that the injected sidecar belongs to. If 
 
       -  If there are pods that are not injected with sidecars in selected namespaces, all pods running the Deployment will be restarted to inject sidecars. If all pods have sidecars injected, the pods will not be restarted.
 
-      |image2|: When you do not enable **Restart Existing Services**, the istio-proxy sidecars cannot be automatically injected into the pods of existing services. In this case, you need to manually restart the pods on the CCE console to inject the sidecars. This parameter affects only existing services. If the namespaces are labeled with **istio-injection=enabled**, sidecars will be automatically injected into new pods.
+      |image2|: The istio-proxy sidecars cannot be automatically injected into the pods of existing services. You need to manually restart the pods on the CCE console to inject the sidecars. This parameter affects only existing services. If the namespaces are labeled with **istio-injection=enabled** or **istio.io/rev=<revision>**, sidecars will be automatically injected into new pods.
+
+      .. caution::
+
+         This module does not provide the function of restarting services in a specific namespace. If a namespace is not selected, the automatic injection label will be removed from the namespace. After the workload in the namespace is restarted, the istio-proxy sidecar will not be automatically injected.
+
+         To inject a sidecar into a workload in a specified namespace, ensure that the namespace is selected and enabled. Then, go to the **Workloads** page of the CCE cluster console, select the workload, and choose **More** > **Redeploy**. After the workload is restarted, the istio-proxy sidecar is automatically injected.
 
    -  **Traffic Interception Settings**
 
@@ -66,8 +72,10 @@ You can view the namespace and cluster that the injected sidecar belongs to. If 
 
    .. note::
 
-      -  If the system displays a message indicating that modification of namespace injection is not enabled in the following clusters, you need to run the **kubectl** command to enable namespace injection. For details, see :ref:`How Do I Enable Namespace Injection for a Cluster? <asm_faq_0036>`.
-      -  After sidecar injection is enabled for a namespace of a cluster, sidecars are automatically injected for pods of all workloads in the namespace. If you do not want to inject sidecars for some workloads, see :ref:`How Do I Disable Sidecar Injection for Workloads? <asm_faq_0037>`.
+      -  For details about why sidecar injection failed, see .
+
+      -  If ASM displays a message indicating that modification of namespace injection is not enabled in the following clusters, you need to run the **kubectl** command to enable namespace injection. For details, see :ref:`How Do I Enable Namespace Injection for a Cluster? <asm_faq_0036>`
+      -  After sidecar injection is enabled for a namespace of a cluster, sidecars are automatically injected for pods of all workloads in the namespace. If you do not want to inject sidecars for some workloads, see :ref:`How Do I Disable Sidecar Injection for Workloads? <asm_faq_0037>`
 
 Viewing Workload Details
 ------------------------
