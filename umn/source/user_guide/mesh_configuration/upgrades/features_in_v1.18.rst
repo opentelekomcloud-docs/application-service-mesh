@@ -6,8 +6,7 @@ Features in v1.18
 =================
 
 -  Istio 1.18 is supported.
--  CCE Turbo clusters v1.25, v1.27, v1.28, v1.29, v1.30, and v1.31, as well as v1.32 and v1.33 are supported.
--  CCE clusters v1.25, v1.27, v1.28, v1.29, v1.30, and v1.31 , as well as v1.32 and v1.33 are supported.
--  Kubernetes Gateway API is supported.
+-  CCE Turbo clusters v1.25, v1.27, v1.28, v1.29, v1.30, v1.31, v1.32, v1.33, v1.34 are supported.
+-  CCE clusters v1.25, v1.27, v1.28, v1.29, v1.30, v1.32, v1.33, v1.34, and v1.31 are supported.
 
 For details, visit https://istio.io/latest/news/releases/1.18.x/.
