@@ -43,13 +43,15 @@ Procedure
 
    -  **Enable IPv6**
 
-      Conditions for enabling IPv4/IPv6 dual stack for a service mesh
+      The following table describes the conditions for enabling IPv4/IPv6 dual stack for a service mesh.
 
-      +----------------------+---------------+--------------------+--------------------------+-----------------------------------------+
-      | Service Mesh Edition | Istio Version | Cluster Type       | Cluster Network Type     | Remarks                                 |
-      +======================+===============+====================+==========================+=========================================+
-      | Basic edition        | 1.18 or later | CCE Turbo clusters | Cloud Native Network 2.0 | IPv6 needs to be enabled for a cluster. |
-      +----------------------+---------------+--------------------+--------------------------+-----------------------------------------+
+      .. table:: **Table 1** Conditions for enabling IPv4/IPv6 dual stack
+
+         +----------------------+---------------+--------------------+--------------------------+-----------------------------------------+
+         | Service Mesh Edition | Istio Version | Cluster Type       | Cluster Network Type     | Remarks                                 |
+         +======================+===============+====================+==========================+=========================================+
+         | Basic edition        | 1.18 or later | CCE Turbo clusters | Cloud Native Network 2.0 | IPv6 needs to be enabled for a cluster. |
+         +----------------------+---------------+--------------------+--------------------------+-----------------------------------------+
 
       For details, see :ref:`How Do I Create a Service Mesh with IPv4/IPv6 Dual Stack Enabled <asm_bestpractice_1009>`.
 
@@ -84,7 +86,7 @@ Procedure
 
             -  Only Istio 1.15 and later versions support third-party tracing services.
             -  If you want to use the third-party Jaeger or Zipkin service, install it first. Then, obtain the service address.
-            -  The default service ports of Jaeger and Zipkin are both 9411. If you create a custom service port during Jaeger or Zipkin installation, replace **Service Port** with the actual value.
+            -  The default service ports of Jaeger and Zipkin are both 9411. If you create a custom service port during the Jaeger or Zipkin installation, replace **Service Port** with the actual value.
 
 #. (Optional) Specify advanced settings.
 

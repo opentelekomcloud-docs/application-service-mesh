@@ -6,7 +6,6 @@ User Guide
 ==========
 
 -  :ref:`Application Service Mesh <asm_01_0016>`
--  :ref:`Using IAM to Grant Access to ASM <asm_01_0141>`
 -  :ref:`Creating a Service Mesh <asm_01_0017>`
 -  :ref:`Mesh Management <asm_01_0023>`
 -  :ref:`Service Management <asm_01_0029>`
@@ -21,7 +20,6 @@ User Guide
    :hidden: 
 
    application_service_mesh
-   using_iam_to_grant_access_to_asm/index
    creating_a_service_mesh/index
    mesh_management/index
    service_management/index

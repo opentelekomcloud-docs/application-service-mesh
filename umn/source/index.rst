@@ -6,6 +6,7 @@ Application Service Mesh - User Guide
    :maxdepth: 1
 
    service_overview/index
+   product_bulletin/index
    getting_started/index
    user_guide/index
    best_practices/index
